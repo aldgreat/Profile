@@ -1,0 +1,55 @@
+body {
+    min-width: 300px;
+}
+
+span.avoidwrap {
+    display: inline-block;
+}
+
+.footer_socialmedia {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+#senderNameError, #senderEmailError, #messageError {
+    color: #FF0000;
+    font-size: 12px;
+    display: none;
+}
+
+#sendEmailErrorMessage {
+    color: #FF0000;
+    font-size: 12px;
+    display: inline;
+    margin-left: 20px;
+}
+
+.captcha-notice {
+    font-size: 10px;
+    color: rgb(169, 169, 169);
+    display: inline-block;
+    width: 255px;
+    text-align: right;
+    margin: 5px 10px;
+}
+
+@media only screen and (max-width: 450px) {
+    .captcha-notice {
+      width: 50%;
+      font-size: 7px;
+      margin: 10px 5px 0 0;
+    }
+  }
+
+.captcha-notice > a:hover {
+    color: blue;
+    opacity: .6;
+}
+
+.g-recaptcha {
+    display: inline;
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}
