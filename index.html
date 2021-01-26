@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Alvin Bangayan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+    content="script-src 'unsafe-inline' 'self' https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js https://608y0baaza.execute-api.us-east-1.amazonaws.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/">
+  <meta http-equiv="Content-Security-Policy" content="frame-src https://www.google.com/recaptcha/">
+  <meta http-equiv="Content-Security-Policy"
+    content="style-src 'self' 'unsafe-inline' https://www.w3schools.com/w3css/4/w3.css https://fonts.googleapis.com https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="shortcut icon" type="image/ico" href="/img/favicon.ico" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88238825-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-88238825-3');
+  </script>
+</head>
+<style>
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto", sans-serif
+  }
+</style>
+
+<body class="w3-light-grey">
+
+  <!-- Send Email Message Modal -->
+  <div id="sendEmailForm" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+      <div class="w3-center"><br>
+        <span id="sendEmailClose" class="w3-button w3-xlarge w3-hover-blue w3-display-topright"
+          title="Close Modal">&times;</span>
+      </div>
+
+      <form id="emailMessageForm" class="w3-container w3-text-blue">
+        <h2 class="w3-text-grey w3-center">Email Me</h2>
+
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+          <div class="w3-rest">
+            <input id="emailFormSenderName" class="w3-input w3-border" name="name" type="text" placeholder="John Doe"
+              requiblue>
+            <div id="senderNameError"></div>
+          </div>
+        </div>
+
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+          <div class="w3-rest">
+            <input id="emailFormSenderEmail" class="w3-input w3-border" name="email" type="email"
+              placeholder="Your Email" requiblue>
+            <div id="senderEmailError"></div>
+          </div>
+        </div>
+
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+          <div class="w3-rest">
+            <textarea id="emailFormMessage" class="w3-input w3-border" name="message" rows="10" style="resize:none;"
+              placeholder="Message" requiblue></textarea>
+            <div id="messageError"></div>
+          </div>
+        </div>
+      </form>
+
+     <!-- <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+        <button type="button" id="btnMessageClose" class="w3-button w3-blue w3-left">Cancel</button>
+        <div class="g-recaptcha" data-sitekey="6Lcf3boUAAAAAFlrEFXIl09gZPD552elZKtDSLfe"
+          data-callback="onCaptchaCallback" data-size="invisible"></div>
+        <button type="button" id="btnMessageSend" class="w3-button w3-blue w3-right">Send</button>
+        <div class="captcha-notice w3-right">
+          This site is protected by reCAPTCHA and the Google
+          <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+          <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+        </div>
+      </div>
+    -->
+
+    </div>
+  </div>
+
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+
+      <!-- Left Column -->
+      <div class="w3-third">
+
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container">
+            <img src="img/formal.jpg" style="width:100%" alt="Avatar">
+          </div>
+          <div class="w3-container">
+            <p class="w3-xxlarge" style="margin-top: 5px; margin-bottom: 0px"><i
+                class="fa fa-user fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Alvin Bangayan</p>
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-blue"></i>Programmer/Graphic Artist/Designer</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue"></i>Davao City, Philippines</p>
+            <p><a href="https://github.com/aldgreat" target="_blank"><i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-blue"></i>https://github.com/aldgreat</a></p>
+            <p><a href="https://linkedin.com/in/gamelibrary" target="_blank"><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-blue"></i>https://linkedin.com/in/gamelibrary</a></p>
+            <button id="btnEmailMe" class="w3-btn w3-round-large w3-blue"><i
+                class="fa fa-envelope fa-fw w3-large w3-text-white"></i> Email Me</button>
+            <a href="./res/Alvin Bangayan A.pdf" target="_blank"><button class="w3-btn w3-round-large w3-blue"><i
+              class="fa fa-download fa-fw w3-large w3-text-white"></i> Resume</button></a>
+            <hr>
+
+            <p class="w3-large"><b><i class="fa fa-code fa-lg w3-margin-right w3-text-blue"></i>Skills</b></p>
+            <p>Python</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:90%">90%</div>
+            </div>
+            <p>Laravel</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:90%">90%</div>
+            </div>
+            <p>C/C++</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:90%">90%</div>
+            </div>
+            <p>VB.Net</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:80%">
+                <div class="w3-center w3-text-white">80%</div>
+              </div>
+            </div>
+            <p>Web Development</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:80%">80%</div>
+            </div>
+            <p>C#</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:70%">70%</div>
+            </div>
+            <br>
+
+            <p class="w3-large w3-text-theme"><b><i
+                  class="fa fa-globe fa-fw w3-margin-right w3-text-blue"></i>Languages</b></p>
+            <p>English</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge w3-blue" style="height:24px;width:100%"></div>
+            </div>
+            <p>Filipino</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge w3-blue" style="height:24px;width:100%"></div>
+            </div>
+            <br>
+          </div>
+        </div><br>
+
+        <!-- End Left Column -->
+      </div>
+
+      <!-- Right Column -->
+      <div class="w3-twothird">
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-user-circle fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Who Am I?</h2>
+          <div class="w3-container" style="margin-top: -4%;">
+            <p>I'm a Stack Developer, Graphic Designer/Artist from Philippines
+                I enjoy taking complex problems and turning them into simple and beautiful
+                designs. I also love the logic and structure of coding and always strive to
+                write elegant and efficient code, whether it be PHP, HTML, CSS and jQuery.
+                I also love learning new languages such as Laravel, Python and other complex framework.
+
+                When I'm not coding or pushing pixels, you'll find me on the court shooting some hoops and playing
+                online games.
+            </p>
+          </div>
+        </div>
+        
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Work Experience</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Virtual Assistant - Taupo Real Estate</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2018 - February 2020<span
+                //class="w3-tag w3-blue w3-round">Current</span></h6>
+            <p>Developed and Maintaining Real Estate website <a href="https://www.tauporealestate.net/">Taupo Real Estate</a>. I also create graphics such as images and videos
+                to upload on <a href="https://www.facebook.com/tauporealestate/">Social Media</a> and <a href="https://www.youtube.com/channel/UCdXSP31s5BCYY85RAK-FaBw">Video Streaming</a>.
+            </p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Virtual Assistant - My Shopping Deals</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2018 - February 2020</h6>
+            <p>Developed and Maintaining E-commerce website <a href="https://www.myshoppingdeals.net//">My Shopping Deals</a>. I make Ads using Facebook ads and Google Ads. I also create graphics such as images and videos
+                to upload on <a href="https://www.facebook.com/MyShoppingDeals.net/">Social Media</a> and <a href="https://www.youtube.com/channel/UClHHnwVidfCvpHq1KSJUHjg">Video Streaming</a>..</p>
+                <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>English as Second Language Teacher - ACADSOC</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>February 2018 - December 2018</h6>
+            <p>Acadsoc is a Chinese ESL Company, modernized and fast-growing online education company based in Shenzen, China. I teach students ages 3years old and above. Seeing my studends
+                improve in English was fun and 
+            </p>
+            <hr>
+          </div>
+         <!-- <div class="w3-container">
+            <h5 class="w3-opacity"><b>Software Engineer Intern - Capital One</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2019 - Aug 2019</h6>
+            <p>Interned on the Cloud Networking Services team. Built a prototype of an enterprise level cloud monitoring
+              solution. Tech stack included Python, Vue.JS, and AWS. Worked heavily with AWS resources such as IAM,
+              Cloudwatch, Lambda, and SQS. Wrote Python Lambda functions to build serverless backend infrastructure to
+              scale the application and blueuce costs.</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Android Developer - Conferdense Inc.</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2018 - May 2019</h6>
+            <p>Built an Android application using Java and Google Firebase. Designed a user-friendly application using
+              modern design techniques. Identified performance issues and address them by re-designing database to save
+              on usage costs.
+            </p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Software Engineering Intern - The MITRE Corporation</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2018 - Aug 2018</h6>
+            <p>As an intern on the Advanced Mission Planning team I help developed next generation mission planning
+              software for the U.S. Navy and Air Force. Coordinated with design team to provide a friendly UI/UX for
+              users of the software. Along with that, was able to design and build a robust backend for the software.
+            </p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Software Engineer - Abbott Jewelry Systems Inc.</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2013 - May 2018</h6>
+            <p>I developed software in VB.net for retail management. I develop and test code before submitting it for a
+              code review. After my code is reviewed successfully, it is committed to the codebase. I also code review
+              my peer's code to make sure that I can also read the code that I haven't wrote. This allows me to
+              understand more about the software even if I was not working on that particular part. I practiced Agile
+              software development with daily standups and code sprints.</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>IT Technician - Self Employed</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2015 - Aug 2017</h6>
+            <p>I started my own business offering IT and Computer services to the Great New Haven Area. I have worked on
+              home offices, dentist offices, and more. Some services that I have have done include but are not limited
+              to: computer security, software installation, office network installation, building computer, and more.
+            </p><br>
+          </div>
+        </div>
+-->
+     
+<!--
+            <div class="w3-container w3-card w3-white">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Education</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>University of New Haven - </b> <i><span class="avoidwrap">M.S. Computer
+                  Science</span></i></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2019 - <span
+                class="w3-tag w3-blue w3-round">Expected: Dec 2020</span></h6>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>University of New Haven - </b> <i><span class="avoidwrap">B.S. Computer
+                  Science</span></i></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2015 - May 2019</h6>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Independent Software - </b> <span class="avoidwrap"><i>A100 Certified Software
+                  Developer</i></span></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2015 - Feb 2016</h6>
+            <hr>
+          </div>
+        </div>
+-->
+        <!-- End Right Column -->
+      </div>
+
+      <!-- End Grid -->
+    </div>
+
+    <!-- End Page Container -->
+  </div>
+
+ <!-- <footer class="w3-container w3-blue w3-center w3-margin-top">
+    <p>Find me on social media.</p>
+    <a href="https://github.com/FanciestW" target="_blank"><i
+        class="fa fa-3x fa-github footer_socialmedia w3-hover-opacity"></i></a>
+    <a href="https://linkedin.com/in/FanciestW" target="_blank"><i
+        class="fa fa-3x fa-linkedin footer_socialmedia w3-hover-opacity"></i>
+      <a href="https://facebook.com/FanciestW" target="_blank"><i
+          class="fa fa-3x fa-facebook-official footer_socialmedia w3-hover-opacity"></i></a>
+      <a href="https://twitter.com/FanciestW" target="_blank"><i
+          class="fa fa-3x fa-twitter footer_socialmedia w3-hover-opacity"></i></a></a>
+    <p>©
+      <script>document.write(new Date().getFullYear());</script> Alvin Bangayan. All rights reserved.</p>
+  </footer>
+
+  -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./script/script.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+
+</html>
